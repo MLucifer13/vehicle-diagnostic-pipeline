@@ -4,7 +4,7 @@
 This project demonstrates a complete ETL (Extract, Transform, Load) pipeline for processing vehicle sensor data from 14 vehicles over a 59-day period. The project showcases end-to-end data analytics skills including data cleaning, database management, and interactive dashboard creation—all essential skills for a Data Analyst role.
 
 **Live Dashboard Preview:**
-![Dashboard](volvo_proj.pdf)
+![Dashboard](volvo_proj.png)
 
 ## 🎯 Business Problem
 Fleet management companies need to monitor vehicle health in real-time to:
