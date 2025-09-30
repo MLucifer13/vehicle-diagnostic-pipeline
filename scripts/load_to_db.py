@@ -18,6 +18,7 @@ def load_data_to_db():
     # Read the cleaned data
     try:
         df = pd.read_csv(processed_data_path)
+        print(f"Successfully loaded {len(df)} records from cleaned data")
     except FileNotFoundError:
         print(f"Error: Processed data file not found at {processed_data_path}")
         print("Please run the 'notebooks/01_data_cleaning.ipynb' notebook first to generate it.")
@@ -28,11 +29,13 @@ def load_data_to_db():
 
     # Load the DataFrame into the SQLite table
     df.to_sql(table_name, conn, if_exists='replace', index=False)
+    
+    print(f"Data successfully loaded into the '{table_name}' table")
+    print(f"Database location: '{db_path}'")
+    print(f"Total records in database: {len(df)}")
 
     # Close the connection
     conn.close()
-
-    print(f"Data successfully loaded into the '{table_name}' table in the database at '{db_path}'")
 
 if __name__ == "__main__":
     load_data_to_db()
